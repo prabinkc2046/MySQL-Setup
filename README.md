@@ -22,10 +22,12 @@ sudo systemctl enable mysql
 ```
 Verify if MySQL server is running:
 ```bash
-sudo ss -tap
+sudo ss -tap | grep mysql
 ```
 t: TCP socket
+
 a: Both listening and non-listening sockets
+
 p: Process using the socket
 
 A running MySQL server will list the port (typically 3306) it's listening on.
